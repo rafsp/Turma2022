@@ -16,5 +16,10 @@ namespace ProjetoCRUD
         {
             InitializeComponent();
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Mensagem Padrão");
+        }
     }
 }
