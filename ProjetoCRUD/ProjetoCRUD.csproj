@@ -60,6 +60,12 @@
     <Compile Include="Tela2.Designer.cs">
       <DependentUpon>Tela2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tela3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela3.Designer.cs">
+      <DependentUpon>Tela3.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
