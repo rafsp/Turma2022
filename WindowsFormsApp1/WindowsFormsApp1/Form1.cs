@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
         {
             CarregarDadosBanco();
 
-          }
+        }
 
         private void CarregarDadosBanco()
         {
@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
 
         private void dgvAluno_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            
+
             txtCodigoAluno.Text = dgvAluno.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtNomeAluno.Text = dgvAluno.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtEndereco.Text = dgvAluno.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -64,6 +64,24 @@ namespace WindowsFormsApp1
 
         }
 
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult caixaMensagem = MessageBox.Show("Deseja realmente exluir esse aluno?", "Etec Taboão da Serra", MessageBoxButtons.YesNo);
 
+            if (caixaMensagem == DialogResult.Yes)
+            {
+                string conexao = "server=localhost;database=aula1209;uid=root;pwd=";
+                MySqlConnection conexaoMYSQL = new MySqlConnection(conexao);
+                conexaoMYSQL.Open();
+                MySqlCommand comando = new MySqlCommand("delete from aluno where idAluno=" + txtCodigoAluno.Text + ";", conexaoMYSQL);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Dado excluído com sucesso!");
+                txtNomeAluno.Text = "";
+                txtEndereco.Text = "";
+                txtCodigoAluno.Text = "";
+                pnlAlterar.Visible = false;
+                CarregarDadosBanco();
+            }
+        }
     }
 }

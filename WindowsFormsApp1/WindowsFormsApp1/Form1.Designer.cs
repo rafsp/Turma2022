@@ -37,6 +37,7 @@
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.pnlAlterar = new System.Windows.Forms.Panel();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).BeginInit();
             this.pnlAlterar.SuspendLayout();
             this.SuspendLayout();
@@ -115,6 +116,7 @@
             // 
             // pnlAlterar
             // 
+            this.pnlAlterar.Controls.Add(this.btnExcluir);
             this.pnlAlterar.Controls.Add(this.txtEndereco);
             this.pnlAlterar.Controls.Add(this.btnAlterar);
             this.pnlAlterar.Controls.Add(this.label1);
@@ -124,15 +126,25 @@
             this.pnlAlterar.Controls.Add(this.txtCodigoAluno);
             this.pnlAlterar.Location = new System.Drawing.Point(31, 196);
             this.pnlAlterar.Name = "pnlAlterar";
-            this.pnlAlterar.Size = new System.Drawing.Size(294, 117);
+            this.pnlAlterar.Size = new System.Drawing.Size(326, 162);
             this.pnlAlterar.TabIndex = 6;
             this.pnlAlterar.Visible = false;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(128, 118);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(107, 20);
+            this.btnExcluir.TabIndex = 6;
+            this.btnExcluir.Text = "Excluir Aluno";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 381);
+            this.ClientSize = new System.Drawing.Size(600, 518);
             this.Controls.Add(this.pnlAlterar);
             this.Controls.Add(this.dgvAluno);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -157,6 +169,7 @@
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Panel pnlAlterar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }
 
